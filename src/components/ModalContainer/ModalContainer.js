@@ -1,17 +1,21 @@
 import React from 'react';
 import './ModalContainer.scss'
-import {Modal} from '@material-ui/core'
+import {Modal} from '@material-ui/core' //Componente ui
 
 const ModalContainer = (props) => {
 
-    const{isOpenModal, closeModal, children} = props
+    //children: es todo lo que está dentro del componente que envia los props
+    const {isOpenModal, closeModal, children} = props
+
     return (  
         <Modal
             className="modal-container"
-            open={isOpenModal}
-            onClose={closeModal}
+            open={isOpenModal} //open: cambia a true 'isOpen'
+            onClose={closeModal} //onClose: cambia a false a 'isOpen'
             closeAfterTransition>
+
             <div>{children}</div>
+
         </Modal>
     );
 }
