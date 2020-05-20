@@ -3,10 +3,11 @@ import { FormControl, FormGroup, TextField, Button } from "@material-ui/core";
 import "./FormSendTweet.scss";
 
 const FormSendTweet = (props) => {
+
   const { sendTweet } = props;
   const [formValue, setFormValue] = useState({
-    name: "asd",
-    tweet: "asd",
+    name: "",
+    tweet: "",
   });
 
   const onFormChange = (e) => {
@@ -16,8 +17,10 @@ const FormSendTweet = (props) => {
     });
   };
 
+
   return (
     <div className="form-send-tweet">
+      
       <h2 className="form-send-tweet__title">Enviar Tweet</h2>
       <form
         className="form-send-tweet__form"

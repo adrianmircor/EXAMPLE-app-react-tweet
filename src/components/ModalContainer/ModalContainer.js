@@ -14,7 +14,9 @@ const ModalContainer = (props) => {
             onClose={closeModal} //onClose: cambia a false a 'isOpen'
             closeAfterTransition>
 
-            <div>{children}</div>
+            {/*Recibe el contenido(es un <FormSendTweet/>) cuando se llamó a 
+            este componente desde SendTweet */}
+            <div>{children}</div> 
 
         </Modal>
     );
@@ -24,9 +26,14 @@ export default ModalContainer;
 
 
 /*
-Uso del CHILDREN
+Uso del CHILDREN:
+
+Normalmente, se llama a un componente para enviarle los props,
+sin embargo en el caso de SendTweet, le envia props y además lo que está 
+dentro del componente cuando lo llama. Ejm 
+
 <ModalContainer>
-    ... (aqui irá todo el children)
+    ... (Esto es todo el children)
 </ModalContainer>
 
 */
